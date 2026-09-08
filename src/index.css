@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-onyx text-bone font-sans;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3 {
+    @apply font-display;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    font-variation-settings: 'opsz' 144;
+  }
+
+  ::selection {
+    background: #B9945C;
+    color: #0E0E10;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0E0E10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2A2A2C;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3A3A3D;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-variation-settings: 'opsz' 144;
+  }
+
+  .duotone {
+    filter: grayscale(1) contrast(1.15) brightness(0.55);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
